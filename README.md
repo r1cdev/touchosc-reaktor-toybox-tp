@@ -2,7 +2,7 @@
 - Instrument: Reaktor ToyBox **Tangle Pack** Sequencer, 3 tracks, 32 steps, MIDI out, Standalone
 - Model: SEQ-RTP-3T32S-MS
 - Version: 1.0 
-- ![Static Badge](https://img.shields.io/badge/testing-passing-blue)
+- ![Static Badge](https://img.shields.io/badge/testing-progress-blue)
 
 
 <div align="center"> 
@@ -33,6 +33,7 @@ A TouchOSC template to control a Reaktor 3 tracks 32 STEPS Sequencer virtual ins
 	- patt2
 	- rand
 	- glitch
+- **Snapshots:** 4 to store and recall playing sequencer values
 - Clear: Initialize all values
 - Reset: reset to initial position 
 - Transpose: pitch track using an external midi controller
@@ -42,12 +43,8 @@ A TouchOSC template to control a Reaktor 3 tracks 32 STEPS Sequencer virtual ins
 - Clock: Internal (Reaktor), External - Ableton Link  External- Sync Clock  
 - OSC out: to send control and step signals to template
 
-<div align="center"> 
-<img src="images/img2.jpg" >
-</div>
-
 ## Reaktor rack
-- Blocks: ToyBOx Tangle Pack
+- Blocks: ToyBox Tangle Pack
 
 <div align="center"> 
 <img src="images/img3.jpg" >
