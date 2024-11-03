@@ -17,7 +17,8 @@ A TouchOSC template to control a Reaktor 3 tracks 32 STEPS Sequencer virtual ins
 - Library: [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack)
 - Main Modules: Sequencers, Utility
 - Operation Mode:  Standalone
-- DAW Host:  Any DAW that supports virtual MIDI inputs
+- DAW Host:  Any DAW
+- MIDI: Virtual MIDI port 
 
 ## Sequencer
 - Tracks: 3 tracks 
@@ -34,6 +35,7 @@ A TouchOSC template to control a Reaktor 3 tracks 32 STEPS Sequencer virtual ins
 	- rand
 	- glitch
 - **Snapshots:** 4 to store and recall playing sequencer values
+- Link: Link changes in snapshot. clear, reset, transport, mute, pause
 - Clear: Initialize all values
 - Reset: reset to initial position 
 - Transpose: pitch track using an external midi controller
@@ -42,9 +44,11 @@ A TouchOSC template to control a Reaktor 3 tracks 32 STEPS Sequencer virtual ins
 - Step: 1 step forward
 - Clock: Internal (Reaktor), External - Ableton Link  External- Sync Clock  
 - OSC out: to send control and step signals to template
+- MIDI out: 3 MIDI ports to send sequences through virtual midi ports to DAW
 
 ## Reaktor rack
 - Blocks: ToyBox Tangle Pack
+- Rack: Author designed rack with note, gate, level, ramp, counter, clock and utility modular blocks.  
 
 <div align="center"> 
 <img src="images/img3.jpg" >
@@ -57,6 +61,7 @@ A TouchOSC template to control a Reaktor 3 tracks 32 STEPS Sequencer virtual ins
 	- MIDI: Bridge
 	- OSC: Host (IP of PC host), Ports: send 10000, receive 10000
 	- Bridge: Host(IP of PC host)
+- MIDI: Virtual midi ports to connect Reaktor with DAW
 
 ## Requirements
 - Control surface software: TouchOSC
@@ -65,8 +70,8 @@ A TouchOSC template to control a Reaktor 3 tracks 32 STEPS Sequencer virtual ins
 - Plugin: Native Instruments - Reaktor 6
 - Reaktor Modular Blocks: ToyBox Tangle Pack
 - Target virtual instrument: Any virtual instrument in your DAW
-- Target external instrument:  Any external midi instrument 
-- Optional external MIDI controller: For pitch transpose
+- Target external instrument:  Any external midi instrument
+- MIDI: Virtual MIDI ports
 
 ## License
 
