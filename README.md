@@ -43,12 +43,12 @@ Allows you to select Internal or External clock source. The Play/Stops controls 
 ### BPM
 Select de beats per minute in either REAKTOR (INT) or your external DAW (EXT). You will need to MIDI map mannualy the BPM control in your DAW and match the scale. (Reason DAW is already configured). 
 
-### PLAY / STOP
-INT clock mode: PLAY/STOP are already OSC mapped to the Reaktor rack. 
+### Play / Stop
+- INT clock mode: PLAY/STOP are already OSC mapped to the Reaktor rack. 
 
-EXT CLock - Ableton Link: First you will need to midi map this controls to your DAW. Two play buttons are avalilable in this mode, one for Reaktor and one for Ableton. Reaktor can play or stop independent of Ableton, but is linked in beat, phase and tempo to the master clock of Ableton. (But Ableton can start the playing in Reaktor if the Sync option is selected in the midi output ports settings). In this mode Reaktor does not have a modular block to control the start/stop control inside the rack. Play/stop control works with a space bar message whis is sent by the template, but it requires the "focus" on the Reaktor window to work. Unfortunately this is a limitation that you will need to take into account. A stream deck will easy the workflow to work it. 
+- EXT CLock - Ableton Link: First you will need to midi map this controls to your DAW. Two play buttons are avalilable in this mode, one for Reaktor and one for Ableton. Reaktor can play or stop independent of Ableton, but is linked in beat, phase and tempo to the master clock of Ableton. (But Ableton can start the playing in Reaktor if the Sync option is selected in the midi output ports settings). In this mode Reaktor does not have a modular block to control the start/stop control inside the rack. Play/stop control works with a space bar message whis is sent by the template, but it requires the "focus" on the Reaktor window to work. Unfortunately this is a limitation that you will need to take into account. A stream deck will easy the workflow to work it. 
 
-EXT Clock - Reason (Or other external DAW): First you will need to midi map this controls to your DAW. One play/stop button is available, that is mapped to your DAW. The DAW has the transport control and it start and stop the transport in Reaktor. 
+- EXT Clock - Reason (Or other external DAW): First you will need to midi map this controls to your DAW. One play/stop button is available, that is mapped to your DAW. The DAW has the transport control and it start and stop the transport in Reaktor. 
 
 ### Snapshots
 The template supports the snapshot (preset) functionality, that allows you to save and recall up to four configurations per sequencer: note, gate, velocity and modulation controls. Each time you select a snapshot,  it automatically changes the value in the Reaktor file. But be aware it is no bidirectional, that means, if you change a value in the Reaktor rack, it will not be updated to the template. The template acts as the "master" configuration. If you want to start from zero, just run press the CLEAR button with the LINK enabled to clear the values at once in the 3 sequencers and repeat that for each snapshot. 
