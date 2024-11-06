@@ -10,7 +10,57 @@
 </div>
 
 ## Description
-A TouchOSC template to control a Reaktor 3 tracks 32 STEPS Sequencer virtual instrument, using ToyBox Tangle Pack modular blocks which can be used to jam and inspire your productions. It "materializes" a well featured  "physical" sequencer for your musical production workflow.
+A TouchOSC template to control a Reaktor 3 tracks 32 STEPS Sequencer virtual instrument, using ToyBox Tangle Pack modular blocks. It "materializes" a well featured  "physical" sequencer for your musical production workflow to  jam and inspire your productions.
+
+## Operation
+The template is  with Reaktor running in standalone mode outside of your DAW using the rack (preset) file included in the repository, with clock synchronization in 3 modes:
+
+### Clock Mode 1: Reaktor internal Clock
+In this mode Reaktor works as the master clock source. Select INT as the clock source in the template and send MIDI Clock to MIDI output in Reaktor. Configure your DAW or your external synthesizer or modular gear to receive and sync to a external clock source provide by Reaktor. Each DAW and external gear handles clock configuration slightly differently, so how you enable clock synchronization to a external source may require specific setup steps in each environment.
+
+### Clock Mode 2: Ableton Link
+In this mode Ableton works as the master clock source. Select EXT as the clock source in the template and enable Ableton Link in Reaktor. Enable Link in Ableton and configure your external synthesizer or modular gear to receive and sync to a external clock source provide by Ableton. Each external gear handles clock configuration slightly differently, so how you enable clock synchronization to a external source may require specific setup steps in each environment.
+
+
+### Clock Mode 3: External Clock (Reason)
+Enable "Sync to External Clock" in Reaktor to receive clock from your DAW and enable clock send in your DAW. The template is configured to receive external clock from a Reason DAW. Configure the MIDI clock sync output to use a virtual MIDI port. This mode 3 can be used with any DAW that can send MIDI clock sync.  Each DAW and external gear handles clock configuration slightly differently, so how you enable clock synchronization to a external source may require specific setup steps in each environment. You will also need to configure in your DAW the MIDI mapping for the transport controls (play/stop/BPM) and adjust the BPM scaling accordingly (already configured for Reason DAW in this template). 
+
+
+### Virtual MIDI ports
+Run a virtual midi port in your computer to communicate Reaktor with your DAW (loopMIDI recommended) and do the necessary midi port configurations and routing. If you use the template with external gear, configure en Reaktor the MIDI ports interfaces you use. 
+
+
+### Sync and takeover limitations
+As long as your template and your DAW session are open, both are in sync. But once you close any of them, further changes will lose sync. To keep it in sync, it is recommended to manually save your template and DAW session simultaneously before closing, to keep your session and snapshots to continue working later by recalling them. Be aware that TouchOSC does not support automatic template saving, so you must do it mannualy. Also be aware that the template uses "absolute" scaling, so you occasionally will need to move the controllers to pick up the correct value.
+
+
+## controls
+
+### Snapshots
+The template supports the snapshot (preset) functionality, that allows you to save and recall up to four configurations per sequencer: note, gate, velocity and modulation controls. Each time you select a snapshot,  it automatically changes the value in the Reaktor file. But be aware it is no bidirectional, that means, if you change a value in the Reaktor rack, it will not be updated to the template. The template acts as the "master" configuration. If you want to start from zero, just run press the CLEAR button with the LINK enabled to clear the values at once in the 3 sequencers and repeat that for each snapshot. 
+
+### Link
+The template has a LINK (L) button, that allows you to execute a command simultaneously on the 3 sequencers. The commands that works with the "LINK" feature are: SNAPSHOT, CLEAR, NOTE, TRANSP, MUTE, RESET, PAUSE, and STEP. Just press the L button and it will color in orange the "linked" controls. 
+
+
+### Clear
+
+
+
+### Note display and zoom
+The NOTE button allows you to display the pitch values of each step, displayed on the top of each step gate button. That will easy to setup the note values of each step. The zoom button on the right, extends the faders to input the pitch values, and meke it more easy an confortable to slide the faders. 
+
+### Transpose
+The template has included a -24+24 interval keyboard to transpose, to make it easy to transpose each sequencer track, without the need of an external midi controller. It displays the transpose interval according to the key pressed, being C3 the central key. It is displayed or hidden when you press the Transp control. 
+
+### Mute 
+
+
+
+
+
+
+<br>
 
 ## Instrument
 - Plugin: Native Instruments - Reaktor 6 
