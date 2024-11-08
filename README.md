@@ -25,7 +25,7 @@
 
 
 ## Description
-A TouchOSC template to control a Reaktor 3 tracks 32 STEPS Sequencer virtual instrument, using the [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) modular blocks. It "materializes" a well featured  "physical" sequencer for your musical production workflow to  jam and inspire your productions.
+A TouchOSC template to control with a tablet device a Reaktor Sequencer of 3 tracks, 32 steps per track, built with the [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) modular blocks. It "materializes" a well featured  "physical" sequencer in a tablet midi controller for your musical production workflow to  jam and inspire your productions.
 
 ## Operation
 The template is  with Reaktor running in standalone mode outside of your DAW using the rack (preset) file included in the repository, with clock synchronization in 3 modes:
