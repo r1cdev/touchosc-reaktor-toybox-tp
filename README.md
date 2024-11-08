@@ -31,7 +31,7 @@ A TouchOSC template to control with a tablet device a Reaktor Sequencer of 3 tra
 Reaktor runs in **standalone** mode outside of the DAW using the rack (preset) file included in the repository. The template is the midi controller, Reaktor is the sequencer instrument that can play either a virtual intrument in a DAW or a external instrument. Communication between the template and Reaktor use OSC protocol, with Reaktor being the OSC receiver. Communication between the template and a DAW use MIDI protocol, with the DAW being the Transport control and the external clock source. Clock synchronization between Reaktor and a DAW can be in 3 modes:
 
 <div align="center"> 
-<img src="images/img4.gif" >
+<img src="images/img4.jpg" >
 </div>
 
 ### Clock Mode 1: Reaktor internal Clock
