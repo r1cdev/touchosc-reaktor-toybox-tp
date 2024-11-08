@@ -6,7 +6,8 @@
 - [Transport](#transport)
 - [Control](#controls)
 - [Sequencer](#sequencer)
-
+- [MIDI Setup](#midi-setup)
+- [OSC Setup](#osc-setup)
 
 ## Transport
 
@@ -139,3 +140,8 @@ Select the value of the note on each step. It can be changed at any time and its
 Select the value of the velocity (volume level) on each step. Remember that the velocity signal will work only if your virtual or external instrument supports velocity control. It can be changed at any time and its value is stored automatically in the corresponding snapshot. But remember to mannualy save the template if you close it to keep the values. Depending on the number of steps selected, the velocity steps can be displayed or hidden. The velocity value that you change in the fader is displayed automatically in a pop up box over the note group. 
 
 
+## MIDI setup
+
+
+
+## OSC setup

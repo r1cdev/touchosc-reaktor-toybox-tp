@@ -46,7 +46,7 @@ In this mode Reason (or any other DAW) works as the master clock source. Enable 
 
 
 ### Virtual MIDI ports
-A virtual midi port in your computer is needed to communicate Reaktor with your DAW and do the necessary midi port configurations and routing. If you use the template with external gear, configure en Reaktor the MIDI ports interfaces you use. On a PC you can use [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html) to create virtual ports. On a Mac, you can use the IAC bus to create any number of virtual MIDI buses. This driver can be activated in the Audio MIDI Setup Utility.
+A virtual midi port in your computer is needed to communicate Reaktor with your DAW. You require to configure in Reaktor the virtual MIDI ports interfaces. On a PC you can use [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html) to create virtual ports. On a Mac, you can use the IAC bus to create any number of virtual MIDI buses. This driver can be activated in the Audio MIDI Setup Utility.
 
 
 ### Sync and takeover limitations
