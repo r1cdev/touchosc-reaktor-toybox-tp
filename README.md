@@ -28,31 +28,29 @@
 A TouchOSC template to control with a tablet device a Reaktor Sequencer of 3 tracks, 32 steps per track, built with the [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) modular blocks. It "materializes" a well featured  "physical" sequencer in a tablet midi controller for your musical production workflow to  jam and inspire your productions.
 
 ## Operation
-The template is  with Reaktor running in standalone mode outside of your DAW using the rack (preset) file included in the repository, with clock synchronization in 3 modes:
+Reaktor runs in **standalone** mode outside of the DAW using the rack (preset) file included in the repository. The template is the midi controller, Reaktor is the sequencer instrument that can play either a virtual intrument in a DAW or a external instrument. Communication between the template and Reaktor use OSC protocol, with Reaktor being the OSC receiver. Communication between the template and a DAW use MIDI protocol, with the DAW being the Transport control and the external clock source. Clock synchronization between Reaktor and a DAW can be in 3 modes:
 
 <div align="center"> 
 <img src="images/img4.gif" >
 </div>
 
 ### Clock Mode 1: Reaktor internal Clock
-In this mode Reaktor works as the master clock source. Select INT as the clock source in the template and send MIDI Clock to MIDI output in Reaktor. Configure your DAW or your external synthesizer or modular gear to receive and sync to a external clock source provide by Reaktor. Each DAW and external gear handles clock configuration slightly differently, so how you enable clock synchronization to a external source may require specific setup steps in each environment.
+In this mode Reaktor is the master clock source. Select INT as the clock source in the template. You can optionally configure Reaktor as the master clock if you want to send MIDI Clock to a DAW or a external gear. Configure your DAW or your external synthesizer or modular gear to receive and sync to a external clock source provide by Reaktor. Each DAW and external gear handles clock configuration slightly differently, so how you enable clock synchronization to a external source may require specific setup steps in each environment.
 
 ### Clock Mode 2: Ableton Link
 In this mode Ableton works as the master clock source. Select EXT as the clock source in the template and enable Ableton Link in Reaktor. Enable Link in Ableton and configure your external synthesizer or modular gear to receive and sync to a external clock source provide by Ableton. Each external gear handles clock configuration slightly differently, so how you enable clock synchronization to a external source may require specific setup steps in each environment.
 
 
 ### Clock Mode 3: External Clock (Reason)
-Enable "Sync to External Clock" in Reaktor to receive clock from your DAW and enable clock send in your DAW. The template is configured to receive external clock from a Reason DAW. Configure the MIDI clock sync output to use a virtual MIDI port. This mode 3 can be used with any DAW that can send MIDI clock sync.  Each DAW and external gear handles clock configuration slightly differently, so how you enable clock synchronization to a external source may require specific setup steps in each environment. You will also need to configure in your DAW the MIDI mapping for the transport controls (play/stop/BPM) and adjust the BPM scaling accordingly (already configured for Reason DAW in this template). 
+In this mode Reason (or any other DAW) works as the master clock source. Enable "Sync to External Clock" in Reaktor to receive clock from your DAW and enable clock send in your DAW. The template is configured to receive external clock from Reason DAW. Configure the MIDI clock sync output to use a virtual MIDI port. **Important**: This mode 3 can be used with any other DAW that can send MIDI clock sync.  Each DAW and external gear handles clock configuration slightly differently, so how you enable clock synchronization to a external source may require specific setup steps in each environment. You will also require to configure in your DAW the MIDI mapping for the transport controls (play/stop/BPM) and adjust the BPM scaling accordingly. It is already configured for Reason DAW in this template. 
 
 
 ### Virtual MIDI ports
-Run a virtual midi port in your computer to communicate Reaktor with your DAW (loopMIDI recommended) and do the necessary midi port configurations and routing. If you use the template with external gear, configure en Reaktor the MIDI ports interfaces you use. 
+A virtual midi port in your computer is needed to communicate Reaktor with your DAW and do the necessary midi port configurations and routing. If you use the template with external gear, configure en Reaktor the MIDI ports interfaces you use. On a PC you can use [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html) to create virtual ports. On a Mac, you can use the IAC bus to create any number of virtual MIDI buses. This driver can be activated in the Audio MIDI Setup Utility.
 
 
 ### Sync and takeover limitations
-As long as your template and your DAW session are open, both are in sync. But once you close any of them, further changes will lose sync. To keep it in sync, it is recommended to manually save your template and DAW session simultaneously before closing, to keep your session and snapshots to continue working later by recalling them. Be aware that TouchOSC does not support automatic template saving, so you must do it mannualy. Also be aware that the template uses "absolute" scaling, so you occasionally will need to move the controllers to pick up the correct value.
-
-
+As long as your template and your DAW session are open, both are in sync. But once you close any of them, further changes will lose sync. To keep it in sync, it is recommended to manually save your template and the Reaktor rack session simultaneously before closing, to keep your session and snapshots to continue working later by recalling them. Be aware that TouchOSC does not support automatic template saving, so you must do it mannualy. Also be aware that the template uses "absolute" scaling, so you occasionally will need to move the controllers to pick up the correct value.
  
 <br>
 
@@ -78,21 +76,22 @@ As long as your template and your DAW session are open, both are in sync. But on
 	- patt2
 	- rand
 	- glitch
-- **Snapshots:** 4 to store and recall playing sequencer values
-- Link: Link changes in snapshot. clear, reset, transport, mute, pause
+- **Snapshots:** up to 4 to store and recall sequencer values
+- Link: Link changes in command values
 - Clear: Initialize all values
 - Reset: reset to initial position 
-- Transpose: pitch track using an external midi controller
+- Transpose: +24 to -24 interval keyboard in the template
 - Mute: Mute output
 - Pause: Pause sequencer
 - Step: 1 step forward
-- Clock: Internal (Reaktor), External - Ableton Link  External- Sync Clock  
-- OSC out: to send control and step signals to template
-- MIDI out: 3 MIDI ports to send sequences through virtual midi ports to DAW
+- Clock: 3 modes: Internal (Reaktor), External - Ableton Link, External- Sync Clock  
+- OSC return: Return control sequencer values to the template (gate, position, play)
 
 ## Reaktor rack
-- Blocks: ToyBox Tangle Pack
-- Rack: Author designed rack with note, gate, level, ramp, counter, clock and utility modular blocks.  
+- Blocks: ToyBox Tangle Pack, Bento Box utility block, ToyBox Free Pack OSC send block
+- Rack: Designed rack with note, gate, level, ramp, counter, clock and utility modular blocks.
+- Blocks Mapping: OSC  
+- OSC Configuration: OSC Activate ON, Receive on Port 10000, OSC Send (Identifier Target, Tablet IP address, Port 10000)
 - File: SEQ-RTP-3T32S-MS-v1_0.nksr
 
 <div align="center"> 
@@ -103,17 +102,19 @@ As long as your template and your DAW session are open, both are in sync. But on
 - Reaktor Mapping: OSC
 - DAW Host Mapping:  MIDI
 - TouchOSC Connections 
-	- MIDI: Bridge
-	- OSC: Host (IP of PC host), Ports: send 10000, receive 10000
+	- MIDI Connection 1 : Send Port: Bridge, Receive Port: Bridge
+	- OSC Connection 1: Host (IP of PC host), Ports: send 10000, receive 10000
+	- OSC Connection 2: Host (IP of PC host), Ports: send 12101, receive 12101   (This connection required to send keystrokes)
 	- Bridge: Host(IP of PC host)
-- MIDI: Virtual midi ports to connect Reaktor with DAW
+- Virtual MIDI interface: Virtual midi ports on the PC to communicate Reaktor and DAW
+- Physical MIDI: To communicate Reaktor with external gear
 
 ## Requirements
 - Control surface software: TouchOSC
 - Tablet: An iOS or Android Tablet
-- DAW: Any DAW that supports virtual MIDI inpupts
+- DAW: (Optional) Ableton Live 11/12 or any other DAW with Send Clock. (If running in Clock mode 1 (INT), a DAW is not requiered) 
 - Plugin: Native Instruments - Reaktor 6
-- Reaktor Modular Blocks: ToyBox Tangle Pack
+- Reaktor Modular Blocks: ToyBox Tangle Pack, Free Pack
 - Target virtual instrument: Any virtual instrument in your DAW
 - Target external instrument:  Any external midi instrument
 - MIDI: Virtual MIDI ports

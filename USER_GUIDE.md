@@ -84,7 +84,7 @@ Select one of the 8 sequencer modes: FWD, REV, FWD-REV, TRI, PATT1, PATT2, RAND,
 - **GLITCH** = Same as FWD except every so often plays a random step.
 
 ### Channel
-Select the midi output channel for each sequencer track. Take care to use a midi channel that is not used by any other instrument and use a virtual MIDI port in your computer, that is not used or reserved by any other DAW or applications. On PC you can use [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html) to create virtual ports. On Mac, you can use the IAC bus to create any number of virtual MIDI buses. This driver can be activated in the Audio MIDI Setup Utility.
+Select the midi output channel for each sequencer track. Take care to use a midi channel that is not used by any other instrument and use a virtual MIDI port in your computer, that is not used or reserved by any other DAW or applications. On a PC you can use [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html) to create virtual ports. On a Mac, you can use the IAC bus to create any number of virtual MIDI buses. This driver can be activated in the Audio MIDI Setup Utility.
 
 ### Steps
 Select the number of up to 32 steps per sequencer track. The steps that are not used, change to a hidden state in the template, so you have a visual feedback of the steps available. 
