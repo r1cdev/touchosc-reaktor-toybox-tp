@@ -1,4 +1,6 @@
-## Reaktor ToyBox Tangle Pack Sequencer TouchOSC template
+## Reaktor ToyBox Tangle Pack Sequencer
+### Custom Built Reaktor rack and TouchOSC Template
+
 - Instrument: Reaktor ToyBox **Tangle Pack** Sequencer, 3 tracks, 32 steps, MIDI out, Standalone
 - Model: SEQ-RTP-3T32S-MS
 - Version: 1.0 
@@ -17,7 +19,7 @@
 - [Instrument](#instrument)
 - [Sequencer](#sequencer)
 - [Reaktor rack](#reaktor-rack)
-- [Connections](#connections)
+- [TouchOSC Connections](#touchosc-connections)
 - [Requirements](#requirements)
 - [Files](#files)
 - [License](#license)
@@ -25,7 +27,7 @@
 
 
 ## Description
-A TouchOSC template to control with a tablet device a Reaktor Sequencer of 3 tracks, 32 steps per track, built with the [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) modular blocks. It "materializes" a well featured  "physical" sequencer in a tablet midi controller for your musical production workflow to  jam and inspire your productions.
+A TouchOSC template to control with a tablet device a **CUSTOM BUILT** Reaktor Sequencer of 3 tracks, 32 steps per track, custom built with the [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) modular blocks. It "materializes" a well featured  "physical" sequencer in a tablet midi controller for your musical production workflow to  jam and inspire your productions.
 
 ## Operation
 Reaktor runs in **standalone** mode outside of the DAW using the rack (preset) file included in the repository. The template is the midi controller, Reaktor is the sequencer instrument that can play either a virtual intrument in a DAW or a external instrument. Communication between the template and Reaktor use OSC protocol, with Reaktor being the OSC receiver. Communication between the template and a DAW use MIDI protocol, with the DAW being the Transport control and the external clock source. Clock synchronization between Reaktor and a DAW can be in 3 modes:
@@ -88,17 +90,23 @@ As long as your template and your DAW session are open, both are in sync. But on
 - OSC return: Return control sequencer values to the template (gate, position, play)
 
 ## Reaktor rack
-- Blocks: ToyBox Tangle Pack, Bento Box utility block, ToyBox Free Pack OSC send block
-- Rack: Designed rack with note, gate, level, ramp, counter, clock and utility modular blocks.
+- Blocks: 
+	- [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) 
+	- [ToyBox Free Pack](https://www.toyboxaudio.com/pages/free-pack-details) (OSC send block) 
+	- Reaktor Blocks Base
+- Rack: CUSTOM BUILT rack. Sequencer note, gate, level, ramp, counter, clock and utility modular blocks.
 - Blocks Mapping: OSC  
-- OSC Configuration: OSC Activate ON, Receive on Port 10000, OSC Send (Identifier Target, Tablet IP address, Port 10000)
+- Reaktor OSC Configuration: 
+	- OSC Activate ON 
+	- Receive on Port 10000 
+	- OSC Send (Identifier Target, Tablet device IP address, Port 10000)
 - File: SEQ-RTP-3T32S-MS-v1_0.nksr
 
 <div align="center"> 
 <img src="images/img3.jpg" >
 </div>
 
-## Connections
+## TouchOSC Connections
 - Reaktor Mapping: OSC
 - DAW Host Mapping:  MIDI
 - TouchOSC Connections 
@@ -106,7 +114,7 @@ As long as your template and your DAW session are open, both are in sync. But on
 	- OSC Connection 1: Host (IP of PC host), Ports: send 10000, receive 10000
 	- OSC Connection 2: Host (IP of PC host), Ports: send 12101, receive 12101   (This connection required to send keystrokes)
 	- Bridge: Host(IP of PC host)
-- Virtual MIDI interface: Virtual midi ports on the PC to communicate Reaktor and DAW
+- Virtual MIDI interface: Virtual midi ports on the PC/MAc to communicate Reaktor with DAW
 - Physical MIDI: To communicate Reaktor with external gear
 
 ## Requirements
@@ -114,7 +122,10 @@ As long as your template and your DAW session are open, both are in sync. But on
 - Tablet: An iOS or Android Tablet
 - DAW: (Optional) Ableton Live 11/12 or any other DAW with Send Clock. (If running in Clock mode 1 (INT), a DAW is not requiered) 
 - Plugin: Native Instruments - Reaktor 6
-- Reaktor Modular Blocks: ToyBox Tangle Pack, Free Pack
+- Reaktor Blocks: 
+	- [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) 
+	- [ToyBox Free Pack](https://www.toyboxaudio.com/pages/free-pack-details) (OSC send block) 
+	- Reaktor Blocks Base
 - Target virtual instrument: Any virtual instrument in your DAW
 - Target external instrument:  Any external midi instrument
 - MIDI: Virtual MIDI ports
