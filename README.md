@@ -4,7 +4,7 @@
 - Instrument: Reaktor ToyBox **Tangle Pack** Sequencer, 3 tracks, 32 steps, MIDI out, Standalone
 - Model: SEQ-RTP-3T32S-MS
 - Version: 1.0 
-- ![Static Badge](https://img.shields.io/badge/testing-in-progress-blue)
+- ![Static Badge](https://img.shields.io/badge/testing-in_progress-blue)
 
 
 <div align="center"> 
