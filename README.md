@@ -61,7 +61,7 @@ As long as your template and your DAW session are open, both are in sync. But on
 - Libraries:
 	- [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) 
 	- [ToyBox Free Pack](https://www.toyboxaudio.com/pages/free-pack-details) 
-	- [Reaktor Blocks Base] (https://www.native-instruments.com/en/products/komplete/synths/reaktor-6/blocks/)
+	- [Reaktor Blocks Base](https://www.native-instruments.com/en/products/komplete/synths/reaktor-6/blocks/)
 - Main Modules: Sequencers, Utility
 - Operation Mode:  Standalone
 - DAW Host:  Any DAW
