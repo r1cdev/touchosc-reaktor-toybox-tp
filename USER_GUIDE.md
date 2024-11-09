@@ -39,6 +39,7 @@ Selects Internal, Ableton Link or an External clock source. The Play and Stop co
 <img src="images/img15.jpg" with=70% >
 </div>
 
+<br>
 
 ### BPM
 Selects the BPM values for the 3 sequencers depending on the clock source: 
@@ -59,6 +60,8 @@ local daw_ext = 'Reason'      -- Change it to your DAW as needed
 
 ````
 
+<br>
+
 ### Play / Stop
 Play and Stop the 3 sequencer tracks. It has 3 modes of operation, depending on the selected clock source:
 
@@ -77,6 +80,7 @@ Play and Stop the 3 sequencer tracks. It has 3 modes of operation, depending on 
 <img src="images/img15.jpg" with=70% >
 </div>
 
+<br>
 
 
 - **EXT** Clock + **Reason** (Or any other external DAW): Only one play button is displayed. Manually do the midi mapping of the middle PLAY button to Reason. Reaktor will  play or stop controlled in sync by the external clock source of Reason. . Note: Ableton can start play in Reaktor if the sync option is selected in the midi output ports settings. Reaktor does not have a modular block to control the start/stop control inside the rack when EXT clock source is selected
