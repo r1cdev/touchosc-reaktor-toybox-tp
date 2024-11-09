@@ -5,10 +5,12 @@
 This guide explains the setup, usage and control of the **CUSTOM BUILT** Reaktor ToyBox Tangle Pack Sequencer. 
 
 ## Contents
-- [Transport](#transport)
-- [Control](#controls)
-- [Sequencer](#sequencer)
-- [Connections](#connections)
+- [TRANSPORT](#transport)
+- [CONTROL](#control)
+- [SEQUENCER](#sequencer)
+- [CONNECTIONS](#connections)
+- [REAKTOR RACK](#reaktor-rack)
+- [IMPORTANT NOTES](#important-notes)
 
 
 ## TRANSPORT
@@ -26,9 +28,12 @@ Selects Internal, Ableton Link or an External clock source. The Play and Stop co
 
 - **EXT**  **Reason** : This option selects an external DAW clock source. The template displays **Reason** because the BPM values are already scaled for Reason. But you can change to your DAW and modify the script to match the BPM scales of your DAW. 
 
+
 <div align="center"> 
 <img src="images/img8.jpg" with=70% >
 </div>
+
+<br>
 
 <div align="center"> 
 <img src="images/img15.jpg" with=70% >
@@ -61,13 +66,18 @@ Play and Stop the 3 sequencer tracks. It has 3 modes of operation, depending on 
 
 - **EXT** CLock + **Ableton Link** : Two play buttons, the left one is for Reaktor and the right one is for Ableton.  Manually do the midi mapping of the middle PLAY button to Ableton. Reaktor can play or stop independently of Ableton, but is linked in beat, phase and tempo to the master clock of Ableton. Note: Ableton can start play in Reaktor if the sync option is selected in the midi output ports settings. Reaktor does not have a modular block to control the start/stop control inside the rack when EXT clock source is selected. Play/stop control works with a **[SPACE BAR]** message. It requires to have the "focus" on the Reaktor window to work. Unfortunately this is a limitation that you will need to take into account. A stream deck device is recommended in your  workflow. The **PLAY_SPACE** control in the script ese OSC Connection 2 to send SPACE message to TouchOSC Bridge host, port 12101, which in turn send it to Reaktor.
 
+
 <div align="center"> 
 <img src="images/img14.jpg" with=70% >
 </div>
 
+<br>
+
 <div align="center"> 
 <img src="images/img15.jpg" with=70% >
 </div>
+
+
 
 - **EXT** Clock + **Reason** (Or any other external DAW): Only one play button is displayed. Manually do the midi mapping of the middle PLAY button to Reason. Reaktor will  play or stop controlled in sync by the external clock source of Reason. . Note: Ableton can start play in Reaktor if the sync option is selected in the midi output ports settings. Reaktor does not have a modular block to control the start/stop control inside the rack when EXT clock source is selected
 
@@ -93,9 +103,13 @@ Advance one step the selected track (all 3 if LINK selected). This is useful to 
 ### Snapshots
 The template supports a **snapshot** ( or preset) functionality, which allows you to save and recall up to four configuration values on each sequencer track: note, gate, velocity and controls ( gate rate, shuffle, gate time, mode and steps). MIDI channel does not change. Each time you select a snapshot,  it automatically changes the value in the teamplate and in the Reaktor rack. But be aware it is no bidirectional, it only works from the template to Reaktor. So if you change a value in the Reaktor rack, it will not be updated back to the template. The template has the "master" values. If you need to start from zero, just run press CLEAR with LINK enabled to clear all values at once in the 3 sequencer tracks. Repeat it for each snapshot. 
 
+<br>
+
 <div align="center"> 
 <img src="images/img16.gif" with=70% >
 </div>
+
+<br>
 
 ### Link
 Links the execution of commands, to execute it simultaneously on the 3 sequencer tracks. The commands that works with "LINK" are: SNAPSHOT, CLEAR, NOTE, TRANSP, MUTE, RESET, PAUSE, and STEP. Press the **L** button and the linked controls will change color to yellow. 
@@ -165,6 +179,9 @@ The template has a -24 to + 24 interval keyboard to transpose the sequence the t
 </div>
 
 
+<br>
+
+
 ## SEQUENCER
 
 <div align="center"> 
@@ -228,6 +245,9 @@ All blocks are already OSC mapped with the template (inputs and outputs). You wi
 <img src="images/img18.jpg" with=70% >
 </div>
 
+<br>
+
+## IMPORTANT NOTES
 
 > [!CAUTION]
 > ** Counter Block calibration **. Values configured in the knob 1 of the macro knobs SEQ1, SEQ2 SEQ3, are setup with a value = 60.1 . Do not change it. This value is calibrated to the smooth input of the the Counter block to generate a smooth ramp for the sequencer to work properly.  
