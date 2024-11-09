@@ -93,6 +93,7 @@ Pause the selected track (all 3 if LINK selected). The sequencer track stops, no
 ### Step 
 Advance one step the selected track (all 3 if LINK selected). This is useful to test your sequence.  
 
+<br>
 
 ## CONTROL
 
@@ -178,9 +179,7 @@ The template has a -24 to + 24 interval keyboard to transpose the sequence the t
 <img src="images/img9.jpg" with=70% >
 </div>
 
-
 <br>
-
 
 ## SEQUENCER
 
@@ -197,6 +196,8 @@ Select the value of the note on each step. It can be changed at any time and its
 ### Velocity
 Select the value of the velocity (volume level) on each step. Remember that the velocity signal will work only if your virtual or external instrument supports velocity control. It can be changed at any time and its value is stored automatically in the corresponding snapshot. But remember to mannualy save the template if you close it to keep the values. Depending on the number of steps selected, the velocity steps can be displayed or hidden. The velocity value is displayed automatically in a pop up box over the note group when you move a fader.
 
+<br>
+
 
 ## CONNECTIONS
 - Reaktor Mapping: OSC. Already configured in the Reaktor rack file. No need to stup.
@@ -212,6 +213,8 @@ Select the value of the velocity (volume level) on each step. Remember that the 
 	- OSC Activate ON 
 	- Receive on Port 10000 
 	- OSC Send (Identifier Target, Tablet device IP address, Port 10000)
+
+<br>
 	
 ## REAKTOR RACK
 The **CUSTOM BUILT** Reaktor rack consist of the following modular blocks,  most of them are from the ToyBox Tangle Pack set. Go to [Toy Box](https://www.toyboxaudio.com/) to get it. 
