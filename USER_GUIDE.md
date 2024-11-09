@@ -229,9 +229,11 @@ All blocks are already OSC mapped with the template (inputs and outputs). You wi
 </div>
 
 
-> [!NOTES]
-> 1. Values configured in the knob 1 of the macro knobs SEQ1, SEQ2 SEQ3, are setup to a value = 60.1 . Do not change it. This value is calibrated to the smooth input of the the Counter block to generate a smooth ramp for the sequencer to work properly.  
-> 2. EXT - Reason clock mode. Play control in Reaktor wotks with SPACE BAR in this mode. Unfortunately there is no option to control Reaktor transport with a Reaktor Block in this mode. The template sends a space-bar keystroke when you press the Play / Stop in this mode. But you need to have the **focus** over the Reaktor window. If you have a Stream Deck device it will help for your workflow. 
+> [!CAUTION]
+> Values configured in the knob 1 of the macro knobs SEQ1, SEQ2 SEQ3, are setup to a value = 60.1 . Do not change it. This value is calibrated to the smooth input of the the Counter block to generate a smooth ramp for the sequencer to work properly.  
+
+> [!IMPORTANT]
+> EXT - Reason clock mode. Play control in Reaktor wotks with SPACE BAR in this mode. Unfortunately there is no option to control Reaktor transport with a Reaktor Block in this mode. The template sends a space-bar keystroke when you press the Play / Stop in this mode. But you need to have the **focus** over the Reaktor window. If you have a Stream Deck device it will help for your workflow. 
 
 
  

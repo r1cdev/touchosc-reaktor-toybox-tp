@@ -4,7 +4,7 @@
 - Instrument: Reaktor ToyBox **Tangle Pack** Sequencer, 3 tracks, 32 steps, MIDI out, Standalone
 - Model: SEQ-RTP-3T32S-MS
 - Version: 1.0 
-- ![Static Badge](https://img.shields.io/badge/testing-progress-blue)
+- ![Static Badge](https://img.shields.io/badge/testing-in-progress-blue)
 
 
 <div align="center"> 
@@ -95,8 +95,8 @@ As long as your template and your DAW session are open, both are in sync. But on
 ## Reaktor rack
 - Blocks: 
 	- [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) 
-	- [ToyBox Free Pack](https://www.toyboxaudio.com/pages/free-pack-details) (OSC send block) 
-	- Reaktor Blocks Base
+	- [ToyBox Free Pack](https://www.toyboxaudio.com/pages/free-pack-details) 
+	- [Reaktor Blocks Base](https://www.native-instruments.com/en/products/komplete/synths/reaktor-6/blocks/)
 - Rack: CUSTOM BUILT rack. Sequencer note, gate, level, ramp, counter, clock and utility modular blocks.
 - Blocks Mapping: OSC  
 - Reaktor OSC Configuration: 
