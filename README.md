@@ -58,7 +58,10 @@ As long as your template and your DAW session are open, both are in sync. But on
 
 ## Instrument
 - Plugin: Native Instruments - Reaktor 6 
-- Library: [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack)
+- Libraries:
+	- [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) 
+	- [ToyBox Free Pack](https://www.toyboxaudio.com/pages/free-pack-details) 
+	- Reaktor Blocks Base
 - Main Modules: Sequencers, Utility
 - Operation Mode:  Standalone
 - DAW Host:  Any DAW
