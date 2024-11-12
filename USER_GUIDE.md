@@ -1,5 +1,11 @@
 ## Reaktor ToyBox Tangle Pack Sequencer
-### Custom Built Reaktor rack and TouchOSC Template
+### TouchOSC Template for a Custom Built Reaktor rack sequencer
+
+- Instrument: Reaktor ToyBox **Tangle Pack** Sequencer, 3 tracks, 32 steps, MIDI
+- Model: TBT-332
+- Version: 1.0 
+- ![Static Badge](https://img.shields.io/badge/testing-in_progress-blue)
+
 
 ## USER GUIDE
 This guide explains the setup, usage and control of the **CUSTOM BUILT** Reaktor ToyBox Tangle Pack Sequencer. 
@@ -50,6 +56,7 @@ Selects the BPM values for the 3 sequencers depending on the clock source:
 
 -- **EXT - Reason** : Use the BPM values from the Reason DAW (or any other you use). Default values are from 1 to 244. Manualy do the midi mapping. If you use any other DAW, modify in the template script the MIDI Control Change message of the **BPMRS** control. The default value for Reason adjusted  from 0 to 30.  Change it and adjust to your DAW as needed. To change the name to your DAW, locate in the script the INTEXT and DAW controls the variable daw_ext and change its value. 
 
+Pressing the BPM value in the center of the control, intializes BPM to 120 BPM. 
  
 <div align="center"> 
 <img src="images/img13.jpg" with=70% >
@@ -250,6 +257,18 @@ All blocks are already OSC mapped with the template (inputs and outputs). You wi
 
 <div align="center"> 
 <img src="images/img18.jpg" with=70% >
+</div>
+
+<br>
+
+The rack uses a **OSC send** block to send feedback OSC signals to the template to control and light the sequencer controls:
+- position
+- gate
+- mute 
+- play 
+
+<div align="center"> 
+<img src="images/img19.jpg" with=70% >
 </div>
 
 <br>
