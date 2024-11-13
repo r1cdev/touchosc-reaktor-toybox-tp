@@ -26,9 +26,9 @@ This guide explains the setup, usage and control of the **custom-built** Reaktor
 </div>
 
 ### Clock
-Selects Internal, Ableton Link or an External clock source. The Play and Stop controls and BPM scales change depending on the option selected. When you press and toggle INT, two options are available pressing the right round button: **Link Ableton** and **EXT Reason**. The EXT option shows **Reason** because the template has the BPM values already scaled to this DAW. But you have the option to change it if you use any other external DAW. 
+Selects Internal, Ableton Link or an External clock source. The Play and Stop controls and BPM scales change depending on the option selected. When you press and toggle INT, two options are available by pressing the right round button: **Link Ableton** and **EXT Reason**. The EXT option shows **Reason** because the template has the BPM values already scaled to this DAW. But you have the option to change it if you use any other external DAW. 
 
-- **INT**: This option selects Reason as the clock source. You could use Reaktor as the master clock source for your setup if you select the option "Send clock to MIDI ouput" in the Reaktor settings menu.
+- **INT**: This option selects **Reaktor** as the clock source. You could use Reaktor as the master clock source for your setup if you select the option "Send clock to MIDI ouput" in the Reaktor settings menu.
 
 - **LINK**  **Ableton Link**: This option selects Ableton Link as the clock source. Manually Enable **Link** in both Ableton as and Reaktor.  
 
@@ -52,9 +52,9 @@ Selects the BPM values for the 3 sequencers depending on the clock source:
 
 - **INT** : Use the BPM values from the Reaktor rack. Values are from 1 to 240. Already OSC mapped. 
 
-- **EXT - Ableton Link** : Use the BPM values from the Ableton DAW. Values are from 20 to 240. Manually do the midi mapping and set the BPM scale in Ableton to the max value of 240. 
+- **EXT - Ableton Link** : Use the BPM values from the Ableton DAW. Values are from 20 to 240. Manually edit the midi mapping and set the BPM scale in Ableton to the max value of 240. 
 
-- **EXT - Reason** : Use the BPM values from the Reason DAW (or any other you use). Default values are from 1 to 244. Manually do the midi mapping. If you use any other DAW, modify in the template script the MIDI Control Change message of the **BPMRS** control to set the scale to your DAW as needed. The default CC scale for Reason is setup from 0 to 30. To change the name to your DAW, locate in the script the INTEXT and DAW controls the variable **daw_ext** and change its value. 
+- **EXT - Reason** : Use the BPM values from the Reason DAW (or any other you use). Default values are from 1 to 244. Manually edit the midi mapping. If you use any other DAW, modify in the template script the MIDI Control Change message of the **BPMRS** control to set the scale to your DAW as needed. The default CC scale for Reason is setup from 0 to 30. To change the name to your DAW, locate in the script the INTEXT and DAW controls the variable **daw_ext** and change its value. 
 
 Pressing the BPM value on the center of the control, initialize BPM to 120. 
  
@@ -81,7 +81,7 @@ Play and Stop the 3 sequencer tracks. It has 3 modes of operation, depending on 
 
 - **INT** clock mode: PLAY/STOP play and stop Reaktor rack. Only one play button is displayed that is mapped to Reaktor.
 
-- **EXT** CLock + **Ableton Link** : Two play buttons are displayed, the left one is for Reaktor and the right one is for Ableton. Manually do the midi mapping of the middle PLAY button to Ableton. Reaktor can play or stop independently of Ableton, but it is linked in beat, phase and tempo to the master clock of Ableton Link. **Note:** Ableton can start Reaktor play if the sync option is selected in the midi output ports settings. Reaktor does not have a modular block to control the start/stop control inside the rack when the EXT clock source is selected. In this case play/stop control works with a **[SPACE BAR]** message and requires to have the "focus" on the Reaktor window. A stream deck device would help the workflow. The **PLAY_SPACE** control in the script use OSC Connection 2 to send a keystroke SPACE message to TouchOSC Bridge host port 12101, which in turn is send to Reaktor window.
+- **EXT** CLock + **Ableton Link** : Two play buttons are displayed, the left one is for Reaktor and the right one is for Ableton. Manually edit the midi mapping of the middle PLAY button to Ableton. Reaktor can play or stop independently of Ableton, but it is linked in beat, phase and tempo to the master clock of Ableton Link. **Note:** Ableton can start Reaktor play if the sync option is selected in the midi output ports settings. Reaktor does not have a modular block to control the start/stop control inside the rack when the EXT clock source is selected. In this case play/stop control works with a **[SPACE BAR]** message and requires to have the "focus" on the Reaktor window. A stream deck device would help the workflow. The **PLAY_SPACE** control in the script use OSC Connection 2 to send a keystroke SPACE message to TouchOSC Bridge host port 12101, which in turn is send to Reaktor window.
 
 
 <div align="center"> 
@@ -97,7 +97,7 @@ Play and Stop the 3 sequencer tracks. It has 3 modes of operation, depending on 
 <br>
 
 
-- **EXT** Clock + **Reason** (Or any other external DAW): Play control is from Reason (or your DAW). Only one play button is displayed. Manually do the midi mapping of the middle PLAY button to Reason (or your DAW). Reaktor will  play or stop controlled Reason (or your DAW).
+- **EXT** Clock + **Reason** (Or any other external DAW): Play control is from Reason (or your DAW). Only one play button is displayed. Manually edit the midi mapping of the middle PLAY button to Reason (or your DAW). Reaktor will  play or stop controlled Reason (or your DAW).
 
 ### Mute 
 Mute the selected track (all 3 if LINK selected). The sequencer track continues running, no MIDI output.
@@ -106,7 +106,7 @@ Mute the selected track (all 3 if LINK selected). The sequencer track continues 
 Reset the track position to the start on the selected track (all 3 if LINK selected). The start position is 1 or the last step, depending on the sequencer track direction mode. 
 
 ### Pause
-Pause the selected track (all 3 if LINK selected). The sequencer track stops, no MIDI output. Clock continues running. Once pause is disabled, the sequencer track will restart playing again.   
+Pause the selected track (all 3 if LINK selected). The sequencer track stops, no MIDI output and clock continues running. When pause is disabled, the sequencer track will restart playing again.   
 
 ### Step 
 Manual one step forward the selected track (all 3 if LINK selected). This is useful to test your sequence.  
@@ -120,7 +120,7 @@ Manual one step forward the selected track (all 3 if LINK selected). This is use
 </div>
 
 ### Snapshots
-The template features a **snapshot** (preset) functionality, which allows you to save and recall up to four sets of values for each sequencer track: note, gate, velocity and controls (gate rate, shuffle, gate time, mode and steps). MIDI channel remains the same with each set of snapshots. Each time you select a snapshot, it automatically changes the values in the template and in turn updates the values in the Reaktor rack. But be aware it is not bidirectional, it only works in one direction: from the template to Reaktor. So if you change a value in the Reaktor rack, it will not be updated back to the template. It is not necessary  to change values in the Reaktor rack, do all the changes in the template. If you need to start from zero, just press CLEAR with LINK enabled to clear all the values at once in the 3 sequencer tracks. Repeat it for each snapshot. 
+The template features a **snapshot** (preset) functionality, which allows you to save and recall up to four sets of values for each sequencer track: note, gate, velocity and controls (gate rate, shuffle, gate time, mode and steps). MIDI channel does not change when changing snapshots. Each time you select a snapshot, it automatically changes the values in the template and in turn updates the values in the Reaktor rack. It is not bidirectional, it only works in one direction: from the template to Reaktor. So if you change a value in the Reaktor rack, it will not be updated back to the template. It is not necessary  to change the values in the Reaktor rack, do it in the template. If you need to start from zero, just press CLEAR with LINK enabled to clear all the values at once in the 3 sequencer tracks. Repeat it for each snapshot. 
 
 <br>
 
@@ -131,7 +131,7 @@ The template features a **snapshot** (preset) functionality, which allows you to
 <br>
 
 ### Link
-Links the execution of commands, to run it simultaneously on the 3 sequencer tracks. The controls with "LINK" feature are: SNAPSHOT, CLEAR, NOTE, TRANSP, MUTE, RESET, PAUSE, and STEP. Press the **L** button and the linked controls will change its color to yellow. 
+Links the execution of some controls simultaneously on the 3 sequencer tracks. The controls with "LINK" feature are: SNAPSHOT, CLEAR, NOTE, TRANSP, MUTE, RESET, PAUSE, and STEP. Press the **L** button and the linked controls will change its color to yellow. 
 
 <div align="center"> 
 <img src="images/img10.jpg" with=70% >
@@ -191,7 +191,7 @@ Display the pitch values of each step on top of each step gate. The zoom button 
 
 
 ### Transpose
-The template has a -24 to + 24 interval keyboard to transpose the sequence tracks (all 3 if LINK selected) without the need of an external midi controller keyboard. Toggle the **Transpose** button to display the transpose keyboard on top of the velocity group. The transpose interval value is always displayed at the right, according to the key pressed. A **0** value means no transposing which is selected by pressing the central key **C3**.   
+The template has a -24 to + 24 interval keyboard to transpose the sequence tracks (all 3 if LINK selected) without the need of an external midi controller keyboard. Toggle the **Transpose** button to display the transpose keyboard on top of the velocity group. The transpose interval value is displayed at the right, which corresponds to the key pressed. A **0** value means no transpose when you press the central key **C3**.   
 
 <div align="center"> 
 <img src="images/img9.jpg" with=70% >
@@ -206,7 +206,7 @@ The template has a -24 to + 24 interval keyboard to transpose the sequence track
 </div>
 
 ### Gate 
-Select each step to play it or not. It can be changed at any time and its value is stored automatically in the corresponding snapshot. The steps available depend on the number of steps selected in the snapshot. 
+Select each step to play. It can be changed at any time and its value is stored automatically in the corresponding snapshot. The steps available depend on the number of steps selected in the snapshot. 
 
 ### Note (Pitch) 
 Select the value of the note on each step. It can be changed at any time and its value is stored automatically in the corresponding snapshot. The steps available depend on the number of steps selected in the snapshot. Press the **Note** button to display the  note values. Press the **zoom** button :mag: to expand the faders so you can more easily input a note value. 
