@@ -1,14 +1,14 @@
 ## Reaktor ToyBox Tangle Pack Sequencer
 ### TouchOSC template for a custom built Reaktor rack sequencer
 
-- Instrument: Reaktor ToyBox **Tangle Pack** Sequencer, 3 tracks, 32 steps, MIDI
+- Instrument: Reaktor [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) Sequencer, 3 tracks, 32 steps, MIDI
 - Model: TBT-332
 - Version: 1.0 
 - ![Static Badge](https://img.shields.io/badge/testing-in_progress-blue)
 
 
 ## USER GUIDE
-This guide explains the setup, usage and control of the **CUSTOM BUILT** Reaktor ToyBox Tangle Pack Sequencer. 
+This guide explains the setup, usage and control of the **custom-built** Reaktor ToyBox Tangle Pack Sequencer. 
 
 ## Contents
 - [TRANSPORT](#transport)
@@ -124,7 +124,7 @@ The template features a **snapshot** (preset) functionality, which allows you to
 <br>
 
 ### Link
-Links the execution of commands, to execute it simultaneously on the 3 sequencer tracks. The commands with "LINK" feature are: SNAPSHOT, CLEAR, NOTE, TRANSP, MUTE, RESET, PAUSE, and STEP. Press the **L** button and the linked controls will change its color to yellow. 
+Links the execution of commands, to run it simultaneously on the 3 sequencer tracks. The commands with "LINK" feature are: SNAPSHOT, CLEAR, NOTE, TRANSP, MUTE, RESET, PAUSE, and STEP. Press the **L** button and the linked controls will change its color to yellow. 
 
 <div align="center"> 
 <img src="images/img10.jpg" with=70% >
@@ -230,7 +230,7 @@ See [How to Set Up TouchOSC with Reaktor](https://support.native-instruments.com
 <br>
 	
 ## REAKTOR RACK
-The **CUSTOM BUILT** Reaktor rack using [Toy Box](https://www.toyboxaudio.com/) Tangle Pack blocks. All blocks are already OSC mapped.
+The **custom-built** Reaktor rack using [Toy Box](https://www.toyboxaudio.com/) Tangle Pack blocks. All blocks are already OSC mapped.
 - Sequencer
 	- 3 Counter 
 	- 3 Position 
@@ -276,12 +276,12 @@ The rack uses a **OSC send** block to send feedback OSC signals to the template 
 ## IMPORTANT NOTES
 
 > [!CAUTION]
-> ** Counter Block calibration **. Values configured in knob 1 of the macro knobs SEQ1, SEQ2 SEQ3, are setup with a value = 60.1 . Do not change it. This value is calibrated to the smooth input of the **Counter block** to generate a smooth ramp for the sequencer to work properly.  
+> **Counter Block calibration**. Values configured in knob 1 of the macro knobs SEQ1, SEQ2 SEQ3, are setup with a value = **60.1** . Do not change it. This value is calibrated to the smooth input of the **Counter block** to generate a smooth ramp for the sequencer to work properly.  
 
 <br>
 
 > [!IMPORTANT]
-> ** PLAY Reaktor in EXT - Reason clock mode. ** . **SPACE BAR** is used to Play/Stop Reaktor. The template sends a **space bar** keystroke when you press the Play/Stop button. The **focus** over the Reaktor window is required to work. If you have a Stream Deck device it will help for your workflow. 
+> **PLAY Reaktor in EXT - Reason clock mode.** . **SPACE BAR** is used to Play/Stop Reaktor. The template sends a **space bar** keystroke when you press the Play/Stop button. The **focus** over the Reaktor window is required to work. If you have a Stream Deck device it will help for your workflow. 
 
 
 

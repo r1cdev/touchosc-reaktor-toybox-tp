@@ -1,7 +1,7 @@
 ## Reaktor ToyBox Tangle Pack Sequencer
 ### TouchOSC template for a custom built Reaktor rack sequencer
 
-- Instrument: Reaktor ToyBox **Tangle Pack** Sequencer, 3 tracks, 32 steps, MIDI
+- Instrument: Reaktor [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) Sequencer, 3 tracks, 32 steps, MIDI
 - Model: TBT-332
 - Version: 1.0 
 - ![Static Badge](https://img.shields.io/badge/testing-in_progress-blue)
@@ -130,7 +130,7 @@ If your template and your DAW session are open, the sequencer values and snapsho
 - Reaktor Blocks: 
 	- [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) 
 	- [ToyBox Free Pack](https://www.toyboxaudio.com/pages/free-pack-details) (OSC send block) 
-	- Reaktor Blocks Base](https://www.native-instruments.com/en/products/komplete/synths/reaktor-6/blocks/)
+	- [Reaktor Blocks Base](https://www.native-instruments.com/en/products/komplete/synths/reaktor-6/blocks/)
 - Target virtual instrument: Any virtual instrument in your DAW
 - Target external instrument:  Any external midi instrument
 - MIDI: Virtual MIDI ports
