@@ -209,7 +209,7 @@ The template has a -24 to + 24 interval keyboard to transpose the sequence track
 Select each step to play it or not. It can be changed at any time and its value is stored automatically in the corresponding snapshot. The steps available depend on the number of steps selected in the snapshot. 
 
 ### Note (Pitch) 
-Select the value of the note on each step. It can be changed at any time and its value is stored automatically in the corresponding snapshot. The steps available depend on the number of steps selected in the snapshot. Press the **Note** button to display the  note values. Press the **zoom** :mag: button to expand the faders so you can more easily input a note value. 
+Select the value of the note on each step. It can be changed at any time and its value is stored automatically in the corresponding snapshot. The steps available depend on the number of steps selected in the snapshot. Press the **Note** button to display the  note values. Press the **zoom** button :mag: to expand the faders so you can more easily input a note value. 
 
 ### Velocity
 Select the value of the velocity (volume level) on each step. The velocity signal will work only if your virtual or external instrument supports velocity control. It can be changed at any time and its value is stored automatically in the corresponding snapshot. The steps available depend on the number of steps selected in the snapshot. The velocity value is displayed automatically  in a pop-up box over the note group when you move a fader.
