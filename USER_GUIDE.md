@@ -281,7 +281,7 @@ The rack uses a **OSC send** block to send feedback OSC signals to the template 
 <br>
 
 > [!IMPORTANT]
-> **PLAY Reaktor in EXT - Reason clock mode.** . **SPACE BAR** is used to Play/Stop Reaktor. The template sends a **space bar** keystroke when you press the Play/Stop button. The **focus** over the Reaktor window is required to work. If you have a Stream Deck device it will help for your workflow. 
+> **PLAY Reaktor in EXT - Reason clock mode** . **SPACE BAR** is used to Play/Stop Reaktor. The template sends a **space bar** keystroke when you press the Play/Stop button. The **focus** over the Reaktor window is required to work. If you have a Stream Deck device it will help for your workflow. 
 
 
 
