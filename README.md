@@ -21,7 +21,7 @@
 - [Reaktor rack](#reaktor-rack)
 - [TouchOSC Connections](#touchosc-connections)
 - [Requirements](#requirements)
-- [Files](#files)
+- [Download](#download)
 - [License](#license)
 - [Support the Author](#support-the-author)
 
@@ -135,7 +135,8 @@ If your template and your Reaktor session are open, the sequencer values and sna
 - Target external instrument:  Any external midi instrument
 - MIDI: Virtual MIDI ports
 
-## Files 
+## Download
+Download the following files to use the template:
 - TouchOSC template: TBT-332-v1.0.tosc
 - Reaktor rack:      TBT-332-v1.0.nksr
 
