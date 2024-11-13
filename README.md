@@ -52,7 +52,7 @@ Use a virtual midi port in your computer to communicate Reaktor with your DAW. O
 
 
 ### Snapshot sync and midi takeover
-If your template and your DAW session are open, the sequencer values and snapshots are in sync. But once you close any of them, further separate changes will lose sync. To keep both in sync, it is recommended to manually save your template and the Reaktor rack session simultaneously before closing and recall them later to continue working. Be aware that TouchOSC does not support automatic template saving, so you must do it manually. The template uses "absolute" scaling, so you occasionally will need to move the controllers to pick up the correct value. 
+If your template and your Reaktor session are open, the sequencer values and snapshots are in sync. But once you close any of them, further separate changes will lose sync. To keep both in sync, it is recommended to manually save your template and the Reaktor rack session simultaneously before closing and recall them later to continue working. Be aware that TouchOSC does not support automatic template saving, so you must do it manually. The template uses "absolute" scaling, so you occasionally will need to move the controllers to pick up the correct value. 
  
 <br>
 
@@ -83,7 +83,7 @@ If your template and your DAW session are open, the sequencer values and snapsho
 	- rand
 	- glitch
 - **Snapshots:** up to 4 to store and recall sequencer values
-- Link: Link changes in command values
+- Link: Link changes in control values
 - Clear: Initialize values
 - Reset: Reset to start position 
 - Transpose: +24 to -24 interval keyboard
