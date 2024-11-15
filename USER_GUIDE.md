@@ -258,9 +258,13 @@ The **custom-built** Reaktor rack using the [ToyBox Tangle Pack](https://www.toy
 	- 1 MIDI out (3 ports)
 	- 1 OSC out (11 used)
 
+<br>
+
 <div align="center"> 
 <img src="images/img17.jpg" with=70% >
 </div>
+
+<br>
 
 <div align="center"> 
 <img src="images/img18.jpg" with=70% >
@@ -269,10 +273,12 @@ The **custom-built** Reaktor rack using the [ToyBox Tangle Pack](https://www.toy
 <br>
 
 The rack uses a **OSC send** block to send feedback OSC signals to the template to control and light the sequencer controls:
+
 - position
 - gate
 - mute 
 - play 
+
 The smoother block is calibrated to 7ms to trigger the S&H and capture a precise position signal. 
 
 <div align="center"> 
