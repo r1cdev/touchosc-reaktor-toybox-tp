@@ -253,6 +253,7 @@ The **custom-built** Reaktor rack using the [ToyBox Tangle Pack](https://www.toy
 	- 4 Multiply
 	- 2 Invert
 	- 1 Transpose
+	- 1 Smoother
 	- 1 Sample & Hold
 	- 1 MIDI out (3 ports)
 	- 1 OSC out (11 used)
@@ -272,6 +273,7 @@ The rack uses a **OSC send** block to send feedback OSC signals to the template 
 - gate
 - mute 
 - play 
+The smoother block is calibrated to 7ms to trigger the S&H and capture a precise position signal. 
 
 <div align="center"> 
 <img src="images/img19.jpg" with=70% >
