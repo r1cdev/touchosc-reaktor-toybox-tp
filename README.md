@@ -137,8 +137,8 @@ If your template and your Reaktor session are open, the sequencer values and sna
 
 ## Download
 Download the following files to use the template:
-- TouchOSC template: TBT-332-v1.0.tosc
-- Reaktor rack:      TBT-332-v1.0.nksr
+- TouchOSC template: [TBT-332-v1.0.tosc](files/TBT-332-v1.0.tosc)
+- Reaktor rack:      [TBT-332-v1_0.nksr](files/TBT-332-v1_0.nksr)
 
 ## License
 
