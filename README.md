@@ -4,8 +4,7 @@
 - Instrument: Reaktor [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) Sequencer, 3 tracks, 32 steps, MIDI
 - Model: TBT-332
 - Version: 1.0 
-- ![Static Badge](https://img.shields.io/badge/testing-in_progress-blue)
-
+- ![Release](https://img.shields.io/github/v/release/r1cdev/touchosc-reaktor-toybox-tp)
 
 <div align="center"> 
 <img src="images/img1.gif" >
