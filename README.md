@@ -1,8 +1,8 @@
 ## Reaktor ToyBox Tangle Pack Sequencer
-### TouchOSC template for a custom built Reaktor rack sequencer
+### TouchOSC template for a custom-built Reaktor rack sequencer
 
 - Instrument: Reaktor [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) Sequencer, 3 tracks, 32 steps, MIDI
-- Model: TBT-332
+- Model: TBT-332 (custom-built)
 - Version: 1.0 
 - ![Release](https://img.shields.io/github/v/release/r1cdev/touchosc-reaktor-toybox-tp)
 
@@ -26,7 +26,7 @@
 
 
 ## Description
-A TouchOSC template to control and play with a tablet device a **custom built** Reaktor 3 tracks, 32 steps sequencer, using the [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) modular blocks. It "materializes" a physical sequencer in a tablet device for your musical production workflow to jam and inspire your productions. [:arrow_right: Demo](https://www.youtube.com/watch?v=dkv1q5DEcOg)
+A TouchOSC template to control and play with a tablet device a **custom-built** Reaktor 3 tracks, 32 steps sequencer, using the [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) modular blocks. It "materializes" a physical sequencer in a tablet device for your musical production workflow to jam and inspire your productions. [:arrow_right: Demo](https://www.youtube.com/watch?v=dkv1q5DEcOg)
 
 ## Operation
 Reaktor runs in **standalone** mode outside of a DAW using the custom-built rack (preset) file included in the repository. You can play either a virtual instrument in your DAW or play an external instrument with midi. Communication between the template and a Reaktor use OSC protocol. Communication between the template and a DAW use MIDI protocol. Clock synchronization can be selected in 3 modes:
