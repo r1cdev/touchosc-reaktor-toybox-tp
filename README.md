@@ -56,7 +56,7 @@ If your template and your Reaktor session are open, the sequencer values and sna
 <br>
 
 ## Instrument
-- Instrument: **Custom built** 3 tracks, 32 steps sequencer
+- Instrument: **Custom-built** 3 tracks, 32 steps sequencer
 - Plugin: Native Instruments - Reaktor 6 
 - Libraries:
 	- [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) 
@@ -64,7 +64,7 @@ If your template and your Reaktor session are open, the sequencer values and sna
 	- [Reaktor Blocks Base](https://www.native-instruments.com/en/products/komplete/synths/reaktor-6/blocks/)
 - Main Modules: Sequencers, Utility
 - Operation Mode:  Standalone
-- DAW Host:  Any DAW
+- DAW (Optional): Mode 2: Ableton Live, Mode 3: Any, provided it can send MIDI clock sync signal
 - MIDI: Virtual MIDI port 
 
 ## Sequencer
@@ -111,7 +111,7 @@ If your template and your Reaktor session are open, the sequencer values and sna
 
 ## TouchOSC Connections
 - Reaktor Mapping: OSC (already mapped)
-- DAW Host Mapping:  MIDI 
+- DAW Mapping:  MIDI 
 - Tablet device TouchOSC Connections: 
 	- MIDI Connection 1: Send Port: Bridge, Receive Port: Bridge
 	- OSC Connection 1: Host (IP of PC host), Ports: send 10000, receive 10000
@@ -124,7 +124,7 @@ If your template and your Reaktor session are open, the sequencer values and sna
 ## Requirements
 - Control surface software: TouchOSC
 - Tablet: An iOS or Android Tablet
-- DAW (Optional): Ableton Live 11/12 or any other DAW with Send Clock feature. (Only required for clock modes 2 and 3) 
+- DAW (Optional): Mode 2: Ableton Live, Mode 3: Any, provided it can send MIDI clock sync signal
 - Plugin: Native Instruments - Reaktor 6
 - Reaktor Blocks: 
 	- [ToyBox Tangle Pack](https://www.toyboxaudio.com/pages/tangle-pack) 
